@@ -1,3 +1,29 @@
 body{
     background-color: #5F9EA0;
 }
+#header
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 70px;
+    color:#ffffff;
+    text-align: center;
+    display: block;
+}
+#input-l
+{
+    text-align: center;
+    margin-top: 3em;
+}
+#collection
+{
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 3em;
+    display: block;
+    width: 70%;
+    height: 35em;
+    margin-bottom: 3em;
+    border-radius: 10px;
+}
+
+
