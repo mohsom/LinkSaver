@@ -1,3 +1,11 @@
 body{
     background-color: #5F9EA0;
 }
+#header
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 70px;
+    color:#ffffff;
+    text-align: center;
+    display: block;
+}
