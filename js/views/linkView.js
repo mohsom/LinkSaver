@@ -12,8 +12,8 @@ define([
         render:function()
         {
             var temp=$("#link-template").html();
-            $("#collection").append(temp(this.model.toJSON()));
+            this.$el.html(temp(this.model.toJSON()));
+            return this;
         }
     });
-    return LinkView;
 });
