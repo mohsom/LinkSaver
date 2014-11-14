@@ -3,14 +3,18 @@
  */
 require.config({
     baseUrl:"../",
-    path:{
+    paths:{
         jquery:"lib/jquery/jquery-2.1.1.min",
         underscore:"lib/underscore/underscore",
         backbone:"lib/backbone/backbone",
         local:"lib/backbone/local",
-        text:"lib/require/text"
+        text:"lib/require/text",
+        app:"views/app"
     }
 });
-require(["views/app"],function(app){
+require([
+    "app"
+],function(app){
     var app_view=new app;
+    new app_view;
 });

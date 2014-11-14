@@ -9,6 +9,7 @@ define([
 {
     var LinkView=Backbone.View.extend({
         tagName:"div",
+        className:"link-item",
         render:function()
         {
             var temp=$("#link-template").html();
