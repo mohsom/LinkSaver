@@ -17,6 +17,7 @@ define([
         },
         initialize:function(initLinks)
         {
+            this.listenTo(this.collection,"add",this.renderLink);
             this.collection=new linkCol;
             this.render();
         },
