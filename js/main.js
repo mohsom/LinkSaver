@@ -11,8 +11,7 @@ require.config({
         text: "lib/require/text"
     }
 });
-require([
-    "views/app"
-], function (app) {
-    var app_view = new app;
+require(["views/app"],function(app)
+{
+    var app_view=new app;
 });
