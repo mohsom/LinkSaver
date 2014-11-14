@@ -6,8 +6,8 @@ require.config({
     paths:{
         jquery:"lib/jquery/jquery-2.1.1.min",
         underscore:"lib/underscore/underscore",
-        backbone:"lib/backbone/backbone",
-        local:"lib/backbone/local",
+        backbone:"lib/backboneJS/backbone",
+        local:"lib/backboneJS/local",
         text:"lib/require/text",
         app:"views/app"
     }
