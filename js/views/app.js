@@ -6,11 +6,15 @@ define([
     "underscore",
     "backbone",
     "collection/links",
-    "views/linkView"
-],function($,_,Backbone,linkCol,LView)
+    "views/linkView",
+    "models/link"
+],function($,_,Backbone,linkCol,LView,Link)
 {
     var ColView=Backbone.View.extend({
         el:"#collection",
+        events:{
+            "click .add":"addLink"
+        },
         initialize:function(initLinks)
         {
             this.collection=new linkCol;
@@ -28,6 +32,19 @@ define([
                model:item
             });
             this.$el.append(link.render().el);
+        },
+        addLink:function(e)
+        {
+            e.preventDefault();
+            var formData={};
+            $("form").children("input").each(function(i,el)
+            {
+                if($(el).val!="")
+                {
+                    formData[el.id]=$(el).val();
+                }
+            });
+            this.collection.add(new Link(formData));
         }
     });
     return ColView;
