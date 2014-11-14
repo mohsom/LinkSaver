@@ -30,4 +30,5 @@ define([
             this.$el.append(link.render().el);
         }
     });
+    return ColView;
 });

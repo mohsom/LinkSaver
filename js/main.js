@@ -8,12 +8,11 @@ require.config({
         underscore:"lib/underscore/underscore",
         backbone:"lib/backboneJS/backbone",
         local:"lib/backboneJS/local",
-        text:"lib/require/text",
-        app:"views/app"
+        text:"lib/require/text"
     }
 });
-require([
-    "app"
+define([
+    "views/app"
 ],function(app){
     var app_view=new app;
     new app_view;
