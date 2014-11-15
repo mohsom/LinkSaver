@@ -4,7 +4,7 @@ body {
 
 #header {
     font-family: 'Open Sans', sans-serif;
-    font-size: 70px;
+    font-size: 80px;
     color: #ffffff;
     text-align: center;
     display: block;
@@ -24,6 +24,7 @@ body {
 #input-l {
     text-align: center;
     margin-top: 1em;
+    margin-left: -4em;
 }
 
 #collection {
@@ -63,7 +64,7 @@ body {
 .add {
     position: absolute;
     margin-top: -5.45em;
-    margin-left: 56.5em;
+    margin-left: 53.5em;
 }
 
 .disable {
