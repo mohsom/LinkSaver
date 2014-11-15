@@ -61,6 +61,8 @@ body {
 .butl:hover
 {
     color: red;
+    transform: scale(1.1);
+    transition: all 0.25s;
 }
 .add {
     position: absolute;
