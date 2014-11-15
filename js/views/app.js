@@ -25,6 +25,7 @@ app.ColView = Backbone.View.extend({
     },
     addLink: function (e) {
         e.preventDefault();
+        console.log("click!");
         this.collection.add(new app.LinkModel({
             title:$("#title").val(),
             href:$("#href").val()
