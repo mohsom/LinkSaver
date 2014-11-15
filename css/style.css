@@ -8,6 +8,7 @@ body {
     color: #ffffff;
     text-align: center;
     display: block;
+    margin-top: 0.5em;
 }
 
 #header1 {
@@ -69,6 +70,30 @@ body {
 
 .disable {
     visibility: hidden;
+}
+.git
+{
+    margin-top: 0.5em;
+    margin-left: 1em;
+    position: absolute;
+}
+a
+{
+    color: #ffffff;
+}
+a:hover
+{
+    color: #ffffff;
+    transform: scale(1.1);
+    transition: all 0.25s;
+}
+a:visited
+{
+    color: #ffffff;
+}
+a:active
+{
+    color: #ffffff;
 }
 
 
