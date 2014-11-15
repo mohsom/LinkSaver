@@ -5,6 +5,6 @@ app.LinkModel = Backbone.Model.extend({
         href: "#"
     }
 });
-console.log("model init");
+console.log("model init ");
 
 
