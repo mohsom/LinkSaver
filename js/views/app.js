@@ -5,7 +5,7 @@ var app = app || {};
 app.ColView = Backbone.View.extend({
     el: "#collection",
     events: {
-        "click .add": "addLink"
+        "click button": "addLink"
     },
     initialize: function (links) {
         this.collection = new app.Links(links);
