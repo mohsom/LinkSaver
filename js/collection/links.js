@@ -1,14 +1,6 @@
-/**
- * Created by mohsom on 14.11.2014.
- */
-define([
-    "backbone",
-    "local",
-    "models/link"
-],function(Backbone,local,LinkModel)
-{
-    var Links=Backbone.Collection.extend({
-        model:LinkModel,
-        local:new Backbone.local("links")
-    });
+var app = app || {};
+app.Links = Backbone.Collection.extend({
+    model: app.LinkModel
+    //local:new Backbone.localStorage("links")
 });
+

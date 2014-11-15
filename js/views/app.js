@@ -1,16 +1,8 @@
 /**
  * Created by mohsom on 14.11.2014.
  */
-define([
-    "jquery",
-    "underscore",
-    "backbone",
-    "collection/links",
-    "views/linkView",
-    "models/link"
-],function($,_,Backbone,linkCol,LView,Link)
-{
-    var ColView=Backbone.View.extend({
+        var app=app||{};
+        app.ColView=Backbone.View.extend({
         el:"#collection",
         events:{
             "click .add":"addLink"
@@ -18,7 +10,7 @@ define([
         initialize:function(initLinks)
         {
             this.listenTo(this.collection,"add",this.renderLink);
-            this.collection=new linkCol;
+            this.collection=new app.Links;
             this.render();
         },
         render:function(){
@@ -29,7 +21,7 @@ define([
         },
         renderLink:function(item)
         {
-            var link=new LView({
+            var link=new app.LinkView({
                model:item
             });
             this.$el.append(link.render().el);
@@ -45,8 +37,6 @@ define([
                     formData[el.id]=$(el).val();
                 }
             });
-            this.collection.add(new Link(formData));
+            this.collection.add(new app.LinkModel(formData));
         }
     });
-    return ColView;
-});
