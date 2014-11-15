@@ -1,33 +1,32 @@
-body{
-    background-color: #5F9EA0;
-    background-image:url(back.jpg);
+body {
+    background-image: url(back.jpg);
 }
-#header
-{
+
+#header {
     font-family: 'Open Sans', sans-serif;
     font-size: 70px;
-    color:#ffffff;
+    color: #ffffff;
     text-align: center;
     display: block;
 }
-#header1
-{
+
+#header1 {
     font-family: 'Open Sans', sans-serif;
     font-size: 70px;
-    color:#ffffff;
+    color: #ffffff;
     margin-left: 4.5em;
     display: block;
     margin-top: 2em;
     position: absolute;
     opacity: 1;
 }
-#input-l
-{
+
+#input-l {
     text-align: center;
     margin-top: 1em;
 }
-#collection
-{
+
+#collection {
     margin: 0 auto;
     background-color: #ffffff;
     margin-top: 3em;
@@ -37,31 +36,37 @@ body{
     border-radius: 10px;
     overflow-y: auto;
 }
-.link-item
-{
+
+.link-item {
     display: block;
     margin: 1.7em;
     float: left;
-    font-size:20px;
-    background-color: #48D1CC;
+    font-size: 20px;
+    background-color: #D3D3D3;
     border-radius: 3px;
     width: 200px;
     height: 100px;
     padding: 10px;
     overflow: hidden;
 }
-.butl
-{
-   float: right;
+
+.butl {
+    float: right;
+    margin-top: -1em;
+    cursor: pointer;
+    display: inline-block;
 }
-.add
+.butl:hover
 {
+    color: red;
+}
+.add {
     position: absolute;
     margin-top: -5.45em;
-    margin-left:56.5em;
+    margin-left: 56.5em;
 }
-.disable
-{
+
+.disable {
     visibility: hidden;
 }
 
