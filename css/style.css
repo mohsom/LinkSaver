@@ -79,21 +79,21 @@ body {
     margin-left: 1em;
     position: absolute;
 }
-a
+a.linkG
 {
     color: #ffffff;
 }
-a:hover
+a.linkG:hover
 {
     color: #ffffff;
     transform: scale(1.1);
     transition: all 0.25s;
 }
-a:visited
+a.linkG:visited
 {
     color: #ffffff;
 }
-a:active
+a.linkG:active
 {
     color: #ffffff;
 }
