@@ -5,12 +5,13 @@ var app = app || {};
 app.ColView = Backbone.View.extend({
     el: "#collection",
     initialize: function (links) {
-        this.collection = new app.Links(links);
-        this.listenTo(this.collection, "add", this.renderLink);
+        app.links = new app.Links(links);
+        this.listenTo(app.links, "add", this.renderLink);
+        app.links.fetch();
         this.render();
     },
     render: function () {
-        this.collection.each(function (item) {
+        app.links.each(function (item) {
             this.renderLink(item)
         }, this);
     },
@@ -26,7 +27,7 @@ app.ColView = Backbone.View.extend({
     addLink: function (e) {
         e.preventDefault();
         console.log("click!");
-        this.collection.add(new app.LinkModel({
+        app.links.add(new app.LinkModel({
             title:$("#title").val(),
             href:$("#href").val()
         }));
