@@ -4,9 +4,6 @@
 var app = app || {};
 app.ColView = Backbone.View.extend({
     el: "#collection",
-    events: {
-        "click .add": "addLink"
-    },
     initialize: function (links) {
         this.collection = new app.Links(links);
         this.listenTo(this.collection, "add", this.renderLink);
@@ -23,14 +20,15 @@ app.ColView = Backbone.View.extend({
         });
         this.$el.append(link.render().el);
     },
-    addLink: function () {
-        var formData = {};
-        $("form").children("input").each(function (i, el) {
-            if ($(el).val != "") {
-                formData[el.id] = $(el).val();
-            }
-        });
-        this.collection.add(new app.LinkModel(formData));
+    events: {
+        "click .add": "addLink"
+    },
+    addLink: function (e) {
+        e.preventDefault();
+        this.collection.add(new app.LinkModel({
+            title:$("#title").val(),
+            href:$("#href").val()
+        }));
     }
 });
 console.log("app view init");
