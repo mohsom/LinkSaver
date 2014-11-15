@@ -4,11 +4,10 @@
 var app = app || {};
 app.ColView = Backbone.View.extend({
     el: "#collection",
-    initialize: function (links) {
-        app.links = new app.Links(links);
+    initialize: function () {
         this.listenTo(app.links, "add", this.renderLink);
+        this.listenTo(app.links, "reset", this.render);
         app.links.fetch();
-        this.render();
     },
     render: function () {
         app.links.each(function (item) {

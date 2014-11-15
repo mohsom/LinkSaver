@@ -8,7 +8,7 @@ test("Models",function(){
     notEqual(app.LinkModel,"undefined","Model is defined");
 });
 test("Collections",function(){
-    notEqual(app.Links,"undefined","Collection is defined");
+    notEqual(app.links,"undefined","Collection is defined");
 });
 test("Views",function(){
     notEqual(app.LinkView,"undefined","Link view is defined");
