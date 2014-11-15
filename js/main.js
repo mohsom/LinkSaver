@@ -9,4 +9,8 @@ $(document).ready(function () {
     } else {
         console.log('no AppView');
     }
+    if(app.links.length!==0)
+    {
+        $("#header1").addClass("disable");
+    }
 });
