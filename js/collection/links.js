@@ -1,7 +1,7 @@
 var app = app || {};
 app.Links = Backbone.Collection.extend({
-    model: app.LinkModel
-    //local:new Backbone.localStorage("links")
+    model: app.LinkModel,
+    local:new Backbone.LocalStorage("links")
 });
-app.Links1=new app.Links();
-
+app.links=new app.Links();
+console.log("collection init");

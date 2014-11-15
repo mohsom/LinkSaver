@@ -7,9 +7,9 @@ app.ColView = Backbone.View.extend({
     events: {
         "click .add": "addLink"
     },
-    initialize: function () {
-        //this.listenTo(this.collection, "add", this.renderLink);
-        this.collection = new app.Links;
+    initialize: function (links) {
+        this.collection = new app.Links(links);
+        this.listenTo(this.collection, "add", this.renderLink);
         this.render();
     },
     render: function () {
@@ -35,3 +35,4 @@ app.ColView = Backbone.View.extend({
         this.collection.add(new app.LinkModel(formData));
     }
 });
+console.log("app view init");
