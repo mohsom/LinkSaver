@@ -26,10 +26,18 @@ app.ColView = Backbone.View.extend({
     addLink: function (e) {
         e.preventDefault();
         console.log("click!");
-        app.links.add(new app.LinkModel({
-            title:$("#title").val(),
-            href:$("#href").val()
-        }));
+        if(($("#title").val()!="")&&($("#href").val()!=""))
+        {
+            app.links.create(new app.LinkModel({
+                title: $("#title").val(),
+                href: $("#href").val()
+            }));
+        }
+        else
+        {
+            app.links.create(new app.LinkModel({
+            }));
+        }
         $("#header1").addClass("disable");
     }
 });
