@@ -5,7 +5,7 @@ var app = app || {};
 app.ColView = Backbone.View.extend({
     el: "#collection",
     events: {
-        "click button": "addLink"
+        "click .add": "addLink"
     },
     initialize: function (links) {
         this.collection = new app.Links(links);
@@ -23,9 +23,7 @@ app.ColView = Backbone.View.extend({
         });
         this.$el.append(link.render().el);
     },
-    addLink: function (e) {
-        e.preventDefault();
-        console.log("dta");
+    addLink: function () {
         var formData = {};
         $("form").children("input").each(function (i, el) {
             if ($(el).val != "") {
