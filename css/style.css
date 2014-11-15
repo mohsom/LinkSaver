@@ -9,6 +9,17 @@ body{
     text-align: center;
     display: block;
 }
+#header1
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 70px;
+    color:#ffffff;
+    margin-left: 4.5em;
+    display: block;
+    margin-top: 2em;
+    position: absolute;
+    opacity: 1;
+}
 #input-l
 {
     text-align: center;
@@ -48,7 +59,10 @@ body{
     margin-top: -5.45em;
     margin-left:58em;
 }
-
+.disable
+{
+    visibility: hidden;
+}
 
 
 

@@ -13,6 +13,10 @@ app.LinkView = Backbone.View.extend({
     deleteL: function () {
         this.model.destroy();
         this.remove();
+        if(app.links.length==0)
+        {
+            $("#header1").removeClass("disable");
+        }
     }
 });
 console.log("Link view init");
