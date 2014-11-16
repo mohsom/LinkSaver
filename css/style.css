@@ -1,6 +1,8 @@
 body {
     background-image: url(back.jpg);
     font-family: 'Open Sans', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #header {
@@ -31,13 +33,12 @@ body {
 
 #collection {
     margin: 0 auto;
-    background-color: #ffffff;
     margin-top: 3em;
     display: block;
     width: 80%;
     margin-bottom: 3em;
     border-radius: 10px;
-    overflow-y: auto;
+    height: 50em;
 }
 
 .link-item {
@@ -112,6 +113,11 @@ a.linkG:active
     margin-left: 14.9em;
     margin-top: 0.4em;
     width: 140px;
+}
+.content
+{
+    display: block;
+    margin: 0 auto;
 }
 
 
