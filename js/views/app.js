@@ -47,6 +47,8 @@ app.ColView = Backbone.View.extend({
             "length":app.links.length
         }));
         $("#header1").addClass("disable");
+        $("#title").val("");
+        $("#href").val("");
     }
 });
 console.log("app view init");
