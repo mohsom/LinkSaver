@@ -99,9 +99,8 @@ a.linkG:active
     color: #ffffff;
 }
 .block-link{
-    width: 70%;
-    height: 90%;
-    overflow: hidden;
+    width: 90%;
+    height: 100%;
     overflow: auto;
 }
 
