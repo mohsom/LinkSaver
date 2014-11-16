@@ -13,4 +13,8 @@ $(document).ready(function () {
     {
         $("#header1").addClass("disable");
     }
+    var temp= _.template($("#link-counter").html());
+    $(".link-count").html(temp({
+        "length":app.links.length
+    }));
 });

@@ -17,6 +17,10 @@ app.LinkView = Backbone.View.extend({
         {
             $("#header1").removeClass("disable");
         }
+        var temp= _.template($("#link-counter").html());
+        $(".link-count").html(temp({
+            "length":app.links.length
+        }));
     }
 });
 console.log("Link view init");

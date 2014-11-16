@@ -18,6 +18,8 @@
 </head>
 <body>
 <a href="https://github.com/mohsom/LinkSaver" class="linkG"><i class="fa fa-4x fa-github git"></i></a>
+<div class="link-count">
+</div>
 <div id="header">
     LinkSaver
 </div>
@@ -47,6 +49,14 @@
             <a href="http://<%=href%>" target="_blank"><%=href%></a>
         </div>
         <i class="fa fa-times butl"></i>
+</script>
+<script type="text/template" id="link-counter">
+    <div class="link-count">
+        <%if(length!=0){%>
+        <%=length%> <%if(length!=1)%>links<%else%>link
+        <%}else%>
+        No links
+    </div>
 </script>
 </body>
 </html>

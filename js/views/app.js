@@ -19,6 +19,10 @@ app.ColView = Backbone.View.extend({
             model: item
         });
         this.$el.append(link.render().el);
+        var temp= _.template($("#link-counter").html());
+        $(".link-count").html(temp({
+            "length":app.links.length
+        }));
     },
     events: {
         "click .add": "addLink"
@@ -38,6 +42,10 @@ app.ColView = Backbone.View.extend({
             app.links.create(new app.LinkModel({
             }));
         }
+        var temp= _.template($("#link-counter").html());
+        $(".link-count").html(temp({
+            "length":app.links.length
+        }));
         $("#header1").addClass("disable");
     }
 });
