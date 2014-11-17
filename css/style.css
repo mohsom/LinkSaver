@@ -60,12 +60,26 @@ body {
 
 .butl {
     float: right;
-    margin-top: -3.5em;
+    margin-top: -3.8em;
     cursor: pointer;
     display: inline-block;
     transition: all 0.25s;
 }
 
+.change-title {
+    float: right;
+    margin-top: -2.3em;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.25s;
+    color: #286090;
+}
+
+.change-title:hover {
+    color: green;
+    transform: scale(1.1);
+    transition: all 0.25s;
+}
 .butl:hover {
     color: red;
     transform: scale(1.1);
