@@ -13,13 +13,12 @@ app.LinkView = Backbone.View.extend({
     deleteL: function () {
         this.model.destroy();
         this.remove();
-        if(app.links.length==0)
-        {
+        if (app.links.length == 0) {
             $("#header1").removeClass("disable");
         }
-        var temp= _.template($("#link-counter").html());
+        var temp = _.template($("#link-counter").html());
         $(".link-count").html(temp({
-            "length":app.links.length
+            "length": app.links.length
         }));
     }
 });

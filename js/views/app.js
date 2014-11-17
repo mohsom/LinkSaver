@@ -19,9 +19,9 @@ app.ColView = Backbone.View.extend({
             model: item
         });
         this.$el.append(link.render().el);
-        var temp= _.template($("#link-counter").html());
+        var temp = _.template($("#link-counter").html());
         $(".link-count").html(temp({
-            "length":app.links.length
+            "length": app.links.length
         }));
     },
     events: {
@@ -30,34 +30,30 @@ app.ColView = Backbone.View.extend({
     addLink: function (e) {
         e.preventDefault();
         console.log("click!");
-        if(($("#title").val()!="")&&($("#href").val()!=""))
-        {
+        if (($("#title").val() != "") && ($("#href").val() != "")) {
             app.links.create(new app.LinkModel({
                 title: $("#title").val(),
                 href: $("#href").val()
             }));
         }
-        if(($("#title").val()=="")&&($("#href").val()==""))
-        {
-            app.links.create(new app.LinkModel({
-            }));
+        if (($("#title").val() == "") && ($("#href").val() == "")) {
+            app.links.create(new app.LinkModel({}));
         }
-        if(($("#title").val()!="")&&($("#href").val()=="")){
+        if (($("#title").val() != "") && ($("#href").val() == "")) {
             app.links.create(new app.LinkModel({
-                title:$("#title").val(),
+                title: $("#title").val(),
                 href: "Noname"
             }));
         }
-        else if(($("#href").val()!="")&&($("#title").val()==""))
-        {
+        else if (($("#href").val() != "") && ($("#title").val() == "")) {
             app.links.create(new app.LinkModel({
-                title:"Noname",
-                href:$("#href").val()
+                title: "Noname",
+                href: $("#href").val()
             }));
         }
-        var temp= _.template($("#link-counter").html());
+        var temp = _.template($("#link-counter").html());
         $(".link-count").html(temp({
-            "length":app.links.length
+            "length": app.links.length
         }));
         $("#header1").addClass("disable");
         $("#title").val("");

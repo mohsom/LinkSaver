@@ -55,12 +55,13 @@ body {
     cursor: pointer;
     display: inline-block;
 }
-.butl:hover
-{
+
+.butl:hover {
     color: red;
     transform: scale(1.1);
     transition: all 0.25s;
 }
+
 .add {
     position: absolute;
     margin: 0 auto;
@@ -72,47 +73,48 @@ body {
     visibility: hidden;
     position: absolute;
 }
-.git
-{
+
+.git {
     margin-top: 0.5em;
     margin-left: 1em;
     position: absolute;
 }
-a.linkG
-{
+
+a.linkG {
     color: #ffffff;
 }
-a.linkG:hover
-{
+
+a.linkG:hover {
     color: #ffffff;
     transform: scale(1.1);
     transition: all 0.25s;
 }
-a.linkG:visited
-{
+
+a.linkG:visited {
     color: #ffffff;
 }
-a.linkG:active
-{
+
+a.linkG:active {
     color: #ffffff;
 }
-.block-link{
+
+.block-link {
     width: 90%;
     height: 100%;
     overflow: auto;
 }
-.link-count
-{
+
+.link-count {
     position: relative;
     float: right;
     color: #ffffff;
-    font-size:40px;
+    font-size: 40px;
     width: 170px;
     display: block;
     margin-top: -2.3em;
 }
-.content
-{
+
+.content {
     display: block;
     margin: 0 auto;
 }
