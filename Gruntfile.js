@@ -11,8 +11,22 @@ module.exports=function(grunt){
                 immned:true,
                 latedef:true,
                 rewcap:true,
-
+                roarg:true,
+                sub:true,
+                undef:true,
+                eqnull:true,
+                browser:true,
+                globals:{
+                    jQuery:true,
+                    $:true,
+                    console:true
+                }
+            },
+            "<%=pkg.name%>":{
+                src:["js/models/*.js","js/collection/*.js","js/views/*.js"]
             }
         }
     });
+    grunt.loadNpmTasks("grunt-contrib-jshint");
+    grunt.registerTask("default",["jshint"]);
 };
