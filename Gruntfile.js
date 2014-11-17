@@ -60,6 +60,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks("grunt-remove-logging");
     grunt.registerTask("default", ["jshint","concat", "uglify", "cssmin","watch"]);
     grunt.registerTask("build-app",["jshint","concat", "uglify", "cssmin"])
 };
