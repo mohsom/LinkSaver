@@ -3,7 +3,11 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-attachment: fixed;
 }
-
+.input-group{
+    -webkit-box-shadow: 5px 6px 5px 0px rgba(50, 50, 50, 0.58);
+    -moz-box-shadow:    5px 6px 5px 0px rgba(50, 50, 50, 0.58);
+    box-shadow:         5px 6px 5px 0px rgba(50, 50, 50, 0.58);
+}
 #header {
     font-family: 'Open Sans', sans-serif;
     font-size: 80px;
@@ -48,6 +52,9 @@ body {
     width: 200px;
     display: inline-block;
     position: relative;
+    -webkit-box-shadow: 6px 8px 5px 0px rgba(50, 50, 50, 0.58);
+    -moz-box-shadow:    6px 8px 5px 0px rgba(50, 50, 50, 0.58);
+    box-shadow:         6px 8px 5px 0px rgba(50, 50, 50, 0.58);
 }
 
 .butl {
@@ -69,6 +76,9 @@ body {
     margin: 0 auto;
     float: right;
     margin-left: 0.4em;
+    -webkit-box-shadow: 5px 6px 5px 0px rgba(50, 50, 50, 0.58);
+    -moz-box-shadow:    5px 6px 5px 0px rgba(50, 50, 50, 0.58);
+    box-shadow:         5px 6px 5px 0px rgba(50, 50, 50, 0.58);
 }
 
 .disable {
