@@ -30,12 +30,12 @@ module.exports=function(grunt){
         },
         concat:{
             dist:{
-                 src:["js/models/link.js","js/collection/links.js","js/views/linkView.js","js/views/app.js","js/main.js"],
+                 src:["js/lib/jquery/jquery-2.1.1.min.js","js/lib/underscore/underscore.js","js/lib/backboneJS/backbone.js","js/lib/backboneJS/backbone.LocalStorage.js","js/models/link.js","js/collection/links.js","js/views/linkView.js","js/views/app.js","js/main.js"],
                  dest:"release/js/main.js"
             }
         }
     });
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-concat");
-    grunt.registerTask("default", ["jshint","concat"]);
+    grunt.registerTask("default", ["concat","jshint"]);
 };
