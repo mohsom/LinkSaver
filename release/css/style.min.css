@@ -106,7 +106,8 @@ body {
     cursor: pointer;
     display: inline-block;
     transition: all .25s;
-    color: #333
+    color: #333;
+    opacity: .5
 }
 
 .git {

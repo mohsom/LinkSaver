@@ -108,6 +108,7 @@ body {
     display: inline-block;
     transition: all 0.25s;
     color: #333333;
+    opacity: 0.5;
 }
 .git {
     margin-top: 0.5em;
