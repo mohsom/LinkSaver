@@ -25,7 +25,7 @@ app.LinkView = Backbone.View.extend({
     },
     changeTitle: function () {
         var text = $(".link-item-title").html();
-        $(".link-item-title").html("<input type='text' class='reset-title' value=" + text + ">");
+        this.$(".link-item-title").html("<input type='text' class='reset-title' value=" + text + ">").focus();
     },
     apply: function () {
         if (((/^\s*$/).test($(".reset-title").val()))) {
@@ -40,7 +40,7 @@ app.LinkView = Backbone.View.extend({
                 href: this.model.get("href")
             });
         }
-        $(".link-item-title").html(this.model.get("title"));
+        this.$(".link-item-title").html(this.model.get("title"));
     }
 });
 console.log("Link view init");
