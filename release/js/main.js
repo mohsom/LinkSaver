@@ -1468,7 +1468,7 @@ app.LinkView = Backbone.View.extend({
         }));
     },
   changeTitle: function () {
-    var text = $(".link-item-title").html();
+    var text = this.$(".link-item-title").html();
     this.$(".link-item-title").html("<input type='text' class='reset-title' value=" + text + ">").focus();
   },
   apply: function () {
