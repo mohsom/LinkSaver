@@ -18,7 +18,7 @@ app.ColView = Backbone.View.extend({
         var link = new app.LinkView({
             model: item
         });
-        this.$el.append(link.render().el);
+        $("#collection").append(link.render().el);
         var temp = _.template($("#link-counter").html());
         $(".link-count").html(temp({
             "length": app.links.length
