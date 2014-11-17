@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         },
         concat: {
             dist: {
-                src: ["js/lib/jquery/jquery-2.1.1.min.js", "js/lib/underscore/underscore.js", "js/lib/backboneJS/backbone.js", "js/lib/backboneJS/backbone.LocalStorage.js", "js/models/link.js", "js/collection/links.js", "js/views/linkView.js", "js/views/app.js", "js/main.js"],
+                src: ["js/lib/jquery/jquery-2.1.1.min.js", "js/lib/underscore/underscore.js", "js/lib/backboneJS/backbone.js", "js/lib/backboneJS/backbone.LocalStorage.js", "js/lib/bootstrap.min.js", "js/models/link.js", "js/collection/links.js", "js/views/linkView.js", "js/views/app.js", "js/main.js"],
                 dest: "release/js/main.js"
             }
         },

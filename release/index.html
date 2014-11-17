@@ -35,7 +35,9 @@
     </div>
     <script type="text/template" id="link-template">
         <div class="block-link">
-            <div class="link-item-title"><%=title%></div>
+            <div class="link-item-title" data-toggle="tooltip" data-placement="top" title="Press 'Enter to save'">
+                <%=title%>
+            </div>
             <a href="http://<%=href%>" target="_blank"><%=href%></a>
         </div>
         <i class="fa fa-times butl"></i>
