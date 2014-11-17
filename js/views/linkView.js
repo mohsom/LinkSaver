@@ -25,7 +25,7 @@ app.LinkView = Backbone.View.extend({
     },
     changeTitle: function () {
         var text = this.$(".link-item-title").html();
-        this.$(".link-item-title").html("<input type='text' class='reset-title' value=" + text + "data-toggle='tooltip' data-placement='top' title='Press Enter to save'>").focus();
+        this.$(".link-item-title").html("<input type='text' class='reset-title' value='"+text+"'data-toggle='tooltip' data-placement='top' title='Press Enter to save'>").focus();
         this.$(".change-title").addClass("disable1");
         this.$(".change-title").removeClass("change-title");
         this.$('input[data-toggle="tooltip"]').tooltip();
