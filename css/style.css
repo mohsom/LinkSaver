@@ -83,7 +83,7 @@ body {
 }
 
 .disable {
-    visibility: hidden;
+    display: none;
     position: absolute;
 }
 
@@ -121,7 +121,7 @@ a.linkG:active {
     color: #ffffff;
     font-size: 40px;
     width: 170px;
-    margin-top: -15.3em;
+    margin-top: -1em;
     text-shadow: 11px 12px 8px rgba(150, 150, 150, 1);
 }
 .link-item-title
