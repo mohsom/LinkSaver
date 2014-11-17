@@ -29,17 +29,13 @@ module.exports=function(grunt){
             }
         },
         concat:{
-            options:{
-                stripBanner:true,
-                banner:"/*My project js file in <%=pkj.name%> version: <%=pkg.version%>*/"
-            },
             dist:{
                  src:["js/models/link.js","js/collection/links.js","js/views/linkView.js","js/views/app.js","js/main.js"],
-                 dist:"release/js/main.js"
+                 dest:"release/js/main.js"
             }
         }
     });
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-concat");
-    grunt.registerTask("default",["jshint","concat"]);
+    grunt.registerTask("default", ["jshint","concat"]);
 };
