@@ -27,8 +27,19 @@ module.exports=function(grunt){
             "<%=pkg.name%>":{
                 src:["js/models/*.js","js/collection/*.js","js/views/*.js"]
             }
+        },
+        concat:{
+            options:{
+                stripBanner:true,
+                banner:"/*My project js file in <%=pkj.name%> version: <%=pkg.version%>*/"
+            },
+            dist:{
+                 src:["js/models/link.js","js/collection/links.js","js/views/linkView.js","js/views/app.js","js/main.js"],
+                 dist:"release/js/main.js"
+            }
         }
     });
     grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.registerTask("default",["jshint"]);
+    grunt.loadNpmTasks("grunt-contrib-concat");
+    grunt.registerTask("default",["jshint","concat"]);
 };
