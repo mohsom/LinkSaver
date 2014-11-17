@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                 tasks: ["concat","uglify","jshint"]
             },
             css:{
-                files: ["style/*.css"],
+                files:"css/*.css",
                 tasks: ["cssmin"]
             }
         }
