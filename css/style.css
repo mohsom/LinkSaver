@@ -17,11 +17,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 70px;
     color: #ffffff;
-    margin-left: 4.5em;
-    display: block;
-    margin-top: 2em;
-    position: absolute;
+    margin: 0 auto;
     opacity: 1;
+    text-align: center;
+    margin-top: 2em;
 }
 
 #input-l {
@@ -32,11 +31,9 @@ body {
 
 #collection {
     margin: 0 auto;
-    margin-top: 3em;
-    display: block;
-    width: 80%;
+    max-width: 80%;
     margin-bottom: 3em;
-    border-radius: 10px;
+    margin-top: 4em;
 }
 
 .link-item {
@@ -66,12 +63,14 @@ body {
 }
 .add {
     position: absolute;
-    margin-top: -5.45em;
-    margin-left: 56em;
+    margin: 0 auto;
+    float: right;
+    margin-left: 1em;
 }
 
 .disable {
     visibility: hidden;
+    position: absolute;
 }
 .git
 {
@@ -104,13 +103,13 @@ a.linkG:active
 }
 .link-count
 {
-    position: absolute;
+    position: relative;
     float: right;
     color: #ffffff;
     font-size:40px;
-    margin-left: 14.5em;
-    margin-top: 0.4em;
     width: 170px;
+    display: block;
+    margin-top: -2.3em;
 }
 .content
 {

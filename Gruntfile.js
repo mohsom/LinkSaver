@@ -11,7 +11,7 @@ module.exports=function(grunt){
                 immned:true,
                 latedef:true,
                 rewcap:true,
-                
+
             }
         }
     });

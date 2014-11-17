@@ -3,7 +3,7 @@
  */
 var app = app || {};
 app.ColView = Backbone.View.extend({
-    el: "#collection",
+    el: "body",
     initialize: function () {
         this.listenTo(app.links, "add", this.renderLink);
         this.listenTo(app.links, "reset", this.render);
