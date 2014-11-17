@@ -16,4 +16,5 @@ $(document).ready(function () {
     $(".link-count").html(temp({
         "length": app.links.length
     }));
+    $('[data-toggle="tooltip"]').tooltip();
 });

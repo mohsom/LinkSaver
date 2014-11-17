@@ -1472,6 +1472,7 @@ app.LinkView = Backbone.View.extend({
     this.$(".link-item-title").html("<input type='text' class='reset-title' value=" + text + ">").focus();
     this.$(".change-title").addClass("disable1");
     this.$(".change-title").removeClass("change-title");
+    this.$('.link-item-title').tooltip();
   },
   apply: function (e) {
     if (e.keyCode == 13) {
@@ -1493,6 +1494,7 @@ app.LinkView = Backbone.View.extend({
     }
 });
 console.log("Link view init");
+
 
 /**
  * Created by mohsom on 14.11.2014.
@@ -1582,4 +1584,5 @@ $(document).ready(function () {
     $(".link-count").html(temp({
         "length": app.links.length
     }));
+  $('[data-toggle="tooltip"]').tooltip();
 });
