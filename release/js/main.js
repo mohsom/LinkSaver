@@ -1431,7 +1431,7 @@ var app = app || {};
 app.LinkModel = Backbone.Model.extend({
 
 });
-
+console.log("model init ");
 
 
 
@@ -1440,14 +1440,15 @@ var Links = Backbone.Collection.extend({
     model: app.LinkModel,
     localStorage: new Backbone.LocalStorage("links")
 });
-
+console.log("collection init");
 app.links = new Links();
 var app = app || {};
 app.LinkView = Backbone.View.extend({
     tagName: "div",
     className: "link-item",
     events: {
-        "click .butl": "deleteL"
+      "click .butl": "deleteL",
+      "click .change-title": "changeTitle"
     },
     render: function () {
         var temp = _.template($("#link-template").html());
@@ -1464,9 +1465,15 @@ app.LinkView = Backbone.View.extend({
         $(".link-count").html(temp({
             "length": app.links.length
         }));
+    },
+  changeTitle: function () {
+    $(".link-item-title").attr('contentEditable', 'true’');
+    var text = $(".link-item-title").html();
+    $(".link-item-title").html("<input type='text' value=" + text + ">");
+
     }
 });
-
+console.log("Link view init");
 
 /**
  * Created by mohsom on 14.11.2014.
@@ -1499,34 +1506,34 @@ app.ColView = Backbone.View.extend({
     },
     addLink: function (e) {
         e.preventDefault();
-
+      console.log("click!");
       if ((!(/^\s*$/).test($("#title").val())) && (!(/^\s*$/).test($("#href").val()))) {
             app.links.create(new app.LinkModel({
                 title: $("#title").val(),
                 href: $("#href").val()
             }));
-
+        console.log("href full,title full");
       }
         if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
             app.links.create(new app.LinkModel({
                 title: "Noname",
                 href: "Noname"
             }));
-
+          console.log("href empty,title empty");
         }
         if ((!(/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
             app.links.create(new app.LinkModel({
                 title: $("#title").val(),
                 href: "Noname"
             }));
-
+          console.log("href empty,title full");
         }
         if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
             app.links.create(new app.LinkModel({
                 title: "Noname",
                 href: $("#href").val()
             }));
-
+          console.log("href full,title empty");
         }
         var temp = _.template($("#link-counter").html());
         $(".link-count").html(temp({
@@ -1537,17 +1544,17 @@ app.ColView = Backbone.View.extend({
         $("#href").val("");
     }
 });
-
+console.log("app view init");
 /**
  * Created by mohsom on 14.11.2014.
  */
 var app = app || {};
 $(document).ready(function () {
     if (app.ColView) {
-
+      console.log('new AppView', app);
       new app.ColView();
     } else {
-
+      console.log('no AppView');
     }
     if (app.links.length !== 0) {
         $("#header1").addClass("disable");

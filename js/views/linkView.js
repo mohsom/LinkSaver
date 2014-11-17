@@ -3,7 +3,8 @@ app.LinkView = Backbone.View.extend({
     tagName: "div",
     className: "link-item",
     events: {
-        "click .butl": "deleteL"
+        "click .butl": "deleteL",
+        "click .change-title": "changeTitle"
     },
     render: function () {
         var temp = _.template($("#link-template").html());
@@ -20,6 +21,12 @@ app.LinkView = Backbone.View.extend({
         $(".link-count").html(temp({
             "length": app.links.length
         }));
+    },
+    changeTitle: function () {
+        $(".link-item-title").attr('contentEditable', 'true’');
+        var text = $(".link-item-title").html();
+        $(".link-item-title").html("<input type='text' value=" + text + ">");
+
     }
 });
 console.log("Link view init");
