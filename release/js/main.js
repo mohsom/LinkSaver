@@ -1448,7 +1448,8 @@ app.LinkView = Backbone.View.extend({
     className: "link-item",
     events: {
       "click .butl": "deleteL",
-      "click .change-title": "changeTitle"
+      "click .change-title": "changeTitle",
+      "dblclick .reset-title": "apply"
     },
     render: function () {
         var temp = _.template($("#link-template").html());
@@ -1467,10 +1468,23 @@ app.LinkView = Backbone.View.extend({
         }));
     },
   changeTitle: function () {
-    $(".link-item-title").attr('contentEditable', 'true’');
     var text = $(".link-item-title").html();
-    $(".link-item-title").html("<input type='text' value=" + text + ">");
-
+    $(".link-item-title").html("<input type='text' class='reset-title' value=" + text + ">");
+  },
+  apply: function () {
+    if (((/^\s*$/).test($(".reset-title").val()))) {
+      this.model.save({
+        title: this.model.get("title"),
+        href: this.model.get("href")
+      });
+    }
+    else {
+      this.model.save({
+        title: $(".reset-title").val().trim(),
+        href: this.model.get("href")
+      });
+    }
+    $(".link-item-title").html(this.model.get("title"));
     }
 });
 console.log("Link view init");
