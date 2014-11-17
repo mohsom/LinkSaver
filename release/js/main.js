@@ -1470,7 +1470,8 @@ app.LinkView = Backbone.View.extend({
   changeTitle: function () {
     var text = this.$(".link-item-title").html();
     this.$(".link-item-title").html("<input type='text' class='reset-title' value=" + text + ">").focus();
-    this.$(".change-title").addClass("disable");
+    this.$(".change-title").addClass("disable1");
+    this.$(".change-title").removeClass("change-title");
   },
   apply: function (e) {
     if (e.keyCode == 13) {
@@ -1487,7 +1488,7 @@ app.LinkView = Backbone.View.extend({
         });
       }
       this.$(".link-item-title").html(this.model.get("title"));
-      this.$(".change-title").removeClass("disable");
+      this.$(".fa-pencil").removeClass("disable1").addClass("change-title");
     }
     }
 });

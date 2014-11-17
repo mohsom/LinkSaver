@@ -101,6 +101,14 @@ body {
     opacity: 0;
 }
 
+.disable1 {
+    float: right;
+    margin-top: -2.3em;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.25s;
+    color: #333333;
+}
 .git {
     margin-top: 0.5em;
     margin-left: 1em;
