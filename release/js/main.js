@@ -1449,7 +1449,7 @@ app.LinkView = Backbone.View.extend({
     events: {
       "click .butl": "deleteL",
       "click .change-title": "changeTitle",
-      "dblclick .reset-title": "apply"
+      "keypress .reset-title": "apply"
     },
     render: function () {
         var temp = _.template($("#link-template").html());
@@ -1470,22 +1470,26 @@ app.LinkView = Backbone.View.extend({
   changeTitle: function () {
     var text = this.$(".link-item-title").html();
     this.$(".link-item-title").html("<input type='text' class='reset-title' value=" + text + ">").focus();
+    this.$(".change-title").addClass("disable");
   },
-  apply: function () {
-    if (((/^\s*$/).test($(".reset-title").val()))) {
-      this.model.save({
-        title: this.model.get("title"),
-        href: this.model.get("href")
-      });
+  apply: function (e) {
+    if (e.keyCode == 13) {
+      if (((/^\s*$/).test($(".reset-title").val()))) {
+        this.model.save({
+          title: this.model.get("title"),
+          href: this.model.get("href")
+        });
+      }
+      else {
+        this.model.save({
+          title: $(".reset-title").val().trim(),
+          href: this.model.get("href")
+        });
+      }
+      this.$(".link-item-title").html(this.model.get("title"));
+      this.$(".change-title").removeClass("disable");
     }
-    else {
-      this.model.save({
-        title: $(".reset-title").val().trim(),
-        href: this.model.get("href")
-      });
-    }
-    this.$(".link-item-title").html(this.model.get("title"));
-    }
+  }
 });
 console.log("Link view init");
 

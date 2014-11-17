@@ -97,7 +97,7 @@ body {
 
 .disable {
     display: none;
-    position: absolute
+    opacity: 0
 }
 
 .git {
