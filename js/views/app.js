@@ -30,22 +30,25 @@ app.ColView = Backbone.View.extend({
     addLink: function (e) {
         e.preventDefault();
         console.log("click!");
-        if (($("#title").val() != "") && ($("#href").val() != "")) {
+        if ((!(/^\s*$/).test($("#href").val())) && (!(/^\s*$/).test($("#href").val()))) {
             app.links.create(new app.LinkModel({
                 title: $("#title").val(),
                 href: $("#href").val()
             }));
         }
-        if (($("#title").val() == "") && ($("#href").val() == "")) {
-            app.links.create(new app.LinkModel({}));
+        if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
+            app.links.create(new app.LinkModel({
+                title: "Noname",
+                href: "Noname"
+            }));
         }
-        if (($("#title").val() != "") && ($("#href").val() == "")) {
+        if ((!(/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
             app.links.create(new app.LinkModel({
                 title: $("#title").val(),
                 href: "Noname"
             }));
         }
-        else if (($("#href").val() != "") && ($("#title").val() == "")) {
+        if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
             app.links.create(new app.LinkModel({
                 title: "Noname",
                 href: $("#href").val()
