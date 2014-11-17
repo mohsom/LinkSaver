@@ -67,6 +67,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-remove-logging");
-    grunt.registerTask("default", ["jshint","removelogging","concat", "uglify", "cssmin","watch"]);
-    grunt.registerTask("build-app",["jshint","removelogging","concat", "uglify", "cssmin"])
+    grunt.registerTask("default", ["jshint", "removelogging", "concat", "removelogging", "uglify", "cssmin", "watch"]);
+    grunt.registerTask("build-app", ["jshint", "removelogging", "concat", "uglify", "cssmin", "removelogging"])
 };
