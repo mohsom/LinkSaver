@@ -37,9 +37,22 @@ app.ColView = Backbone.View.extend({
                 href: $("#href").val()
             }));
         }
-        else
+        if(($("#title").val()=="")&&($("#href").val()==""))
         {
             app.links.create(new app.LinkModel({
+            }));
+        }
+        if(($("#title").val()!="")&&($("#href").val()=="")){
+            app.links.create(new app.LinkModel({
+                title:$("#title").val(),
+                href: "Noname"
+            }));
+        }
+        else if(($("#href").val()!="")&&($("#title").val()==""))
+        {
+            app.links.create(new app.LinkModel({
+                title:"Noname",
+                href:$("#href").val()
             }));
         }
         var temp= _.template($("#link-counter").html());
