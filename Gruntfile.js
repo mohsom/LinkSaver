@@ -23,9 +23,6 @@ module.exports = function (grunt) {
                     Backbone: true,
                     _: true
                 }
-            },
-            "<%=pkg.name%>": {
-                src: ["js/models/*.js", "js/collection/*.js", "js/views/*.js"]
             }
         },
         concat: {
@@ -46,11 +43,16 @@ module.exports = function (grunt) {
                     "release/css/style.min.css": ["css/style.css"]
                 }
             }
+        },
+        watch:{
+            files:"js",
+            tasks:["concat", "uglify", "cssmin", "jshint"]
         }
     });
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-cssmin");
-    grunt.registerTask("default", ["concat", "uglify", "cssmin", "jshint"]);
+    grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.registerTask("default", ["jshint","concat", "uglify", "cssmin","watch"]);
 };
