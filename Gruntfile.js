@@ -44,17 +44,17 @@ module.exports = function (grunt) {
                 }
             }
         },
-        watch:{
+        watch: {
             scripts: {
-                files: ["js/*.js","js/collection/*.js","js/model/*.js","js/views/*js"],
-                tasks: ["concat","uglify","jshint"]
+                files: ["js/*.js", "js/collection/*.js", "js/model/*.js", "js/views/*js"],
+                tasks: ["concat", "uglify", "jshint"]
             },
-            css:{
-                files:"css/*.css",
+            css: {
+                files: "css/*.css",
                 tasks: ["cssmin"]
             }
         },
-        removelogging:{
+        removelogging: {
             dist: {
                 src: "release/js/main.js",
                 dest: "release/js/main.js"
