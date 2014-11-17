@@ -57,4 +57,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.registerTask("default", ["jshint","concat", "uglify", "cssmin","watch"]);
+    grunt.registerTask("build-app",["jshint","concat", "uglify", "cssmin"])
 };
