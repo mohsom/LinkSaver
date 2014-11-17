@@ -1466,7 +1466,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
         return a(b.target).is(this) ? b.handleObj.handler.apply(this, arguments) : void 0
       }
     })
-  })
+    })
 }(jQuery), +function (a) {
   "use strict";
   function b(b) {
@@ -1474,7 +1474,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       var c = a(this), e = c.data("bs.alert");
       e || c.data("bs.alert", e = new d(this)), "string" == typeof b && e[b].call(c)
     })
-  }
+    }
 
   var c = '[data-dismiss="alert"]', d = function (b) {
     a(b).on("click", c, this.close)
@@ -1500,7 +1500,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       var d = a(this), e = d.data("bs.button"), f = "object" == typeof b && b;
       e || d.data("bs.button", e = new c(this, f)), "toggle" == b ? e.toggle() : b && e.setState(b)
     })
-  }
+    }
 
   var c = function (b, d) {
     this.$element = a(b), this.options = a.extend({}, c.DEFAULTS, d), this.isLoading = !1
@@ -1526,7 +1526,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
     d.hasClass("btn") || (d = d.closest(".btn")), b.call(d, "toggle"), c.preventDefault()
   }).on("focus.bs.button.data-api blur.bs.button.data-api", '[data-toggle^="button"]', function (b) {
     a(b.target).closest(".btn").toggleClass("focus", /^focus(in)?$/.test(b.type))
-  })
+    })
 }(jQuery), +function (a) {
   "use strict";
   function b(b) {
@@ -1614,7 +1614,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       var c = a(this);
       b.call(c, c.data())
     })
-  })
+    })
 }(jQuery), +function (a) {
   "use strict";
   function b(b) {
@@ -1627,7 +1627,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       var c = a(this), e = c.data("bs.collapse"), f = a.extend({}, d.DEFAULTS, c.data(), "object" == typeof b && b);
       !e && f.toggle && "show" == b && (f.toggle = !1), e || c.data("bs.collapse", e = new d(this, f)), "string" == typeof b && e[b]()
     })
-  }
+    }
 
   var d = function (b, c) {
     this.$element = a(b), this.options = a.extend({}, d.DEFAULTS, c), this.$trigger = a(this.options.trigger).filter('[href="#' + b.id + '"], [data-target="#' + b.id + '"]'), this.transitioning = null, this.options.parent ? this.$parent = this.getParent() : this.addAriaAndCollapsedClass(this.$element, this.$trigger), this.options.toggle && this.toggle()
@@ -1687,7 +1687,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
     e.attr("data-target") || d.preventDefault();
     var f = b(e), g = f.data("bs.collapse"), h = g ? "toggle" : a.extend({}, e.data(), {trigger: this});
     c.call(f, h)
-  })
+    })
 }(jQuery), +function (a) {
   "use strict";
   function b(b) {
@@ -1702,14 +1702,14 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
     c || (c = b.attr("href"), c = c && /#[A-Za-z]/.test(c) && c.replace(/.*(?=#[^\s]*$)/, ""));
     var d = c && a(c);
     return d && d.length ? d : b.parent()
-  }
+    }
 
   function d(b) {
     return this.each(function () {
       var c = a(this), d = c.data("bs.dropdown");
       d || c.data("bs.dropdown", d = new g(this)), "string" == typeof b && d[b].call(c)
     })
-  }
+    }
 
   var e = ".dropdown-backdrop", f = '[data-toggle="dropdown"]', g = function (b) {
     a(b).on("click.bs.dropdown", this.toggle)
@@ -1845,7 +1845,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
         d.is(":visible") && d.trigger("focus")
       })
     }), b.call(f, g, this)
-  })
+    })
 }(jQuery), +function (a) {
   "use strict";
   function b(b) {
@@ -2024,7 +2024,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
   var d = a.fn.tooltip;
   a.fn.tooltip = b, a.fn.tooltip.Constructor = c, a.fn.tooltip.noConflict = function () {
     return a.fn.tooltip = d, this
-  }
+    }
 }(jQuery), +function (a) {
   "use strict";
   function b(b) {
@@ -2032,7 +2032,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       var d = a(this), e = d.data("bs.popover"), f = "object" == typeof b && b, g = f && f.selector;
       (e || "destroy" != b) && (g ? (e || d.data("bs.popover", e = {}), e[g] || (e[g] = new c(this, f))) : e || d.data("bs.popover", e = new c(this, f)), "string" == typeof b && e[b]())
     })
-  }
+    }
 
   var c = function (a, b) {
     this.init("popover", a, b)
@@ -2061,7 +2061,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
   var d = a.fn.popover;
   a.fn.popover = b, a.fn.popover.Constructor = c, a.fn.popover.noConflict = function () {
     return a.fn.popover = d, this
-  }
+    }
 }(jQuery), +function (a) {
   "use strict";
   function b(c, d) {
@@ -2110,15 +2110,15 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       var b = a(this);
       c.call(b, b.data())
     })
-  })
+    })
 }(jQuery), +function (a) {
   "use strict";
   function b(b) {
     return this.each(function () {
       var d = a(this), e = d.data("bs.tab");
       e || d.data("bs.tab", e = new c(this)), "string" == typeof b && e[b]()
-    })
-  }
+        })
+    }
 
   var c = function (b) {
     this.element = a(b)
@@ -2160,7 +2160,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       var d = a(this), e = d.data("bs.affix"), f = "object" == typeof b && b;
       e || d.data("bs.affix", e = new c(this, f)), "string" == typeof b && e[b]()
     })
-  }
+    }
 
   var c = function (b, d) {
     this.options = a.extend({}, c.DEFAULTS, d), this.$target = a(this.options.target).on("scroll.bs.affix.data-api", a.proxy(this.checkPosition, this)).on("click.bs.affix.data-api", a.proxy(this.checkPositionWithEventLoop, this)), this.$element = a(b), this.affixed = this.unpin = this.pinnedOffset = null, this.checkPosition()
@@ -2203,7 +2203,7 @@ if ("undefined" == typeof jQuery)throw new Error("Bootstrap's JavaScript require
       var c = a(this), d = c.data();
       d.offset = d.offset || {}, null != d.offsetBottom && (d.offset.bottom = d.offsetBottom), null != d.offsetTop && (d.offset.top = d.offsetTop), b.call(c, d)
     })
-  })
+    })
 }(jQuery);
 var app = app || {};
 app.LinkModel = Backbone.Model.extend({
@@ -2247,10 +2247,10 @@ app.LinkView = Backbone.View.extend({
     },
   changeTitle: function () {
     var text = this.$(".link-item-title").html();
-    this.$(".link-item-title").html("<input type='text' class='reset-title' value=" + text + ">").focus();
+    this.$(".link-item-title").html("<input type='text' class='reset-title' value=" + text + "data-toggle='tooltip' data-placement='top' title='Press Enter to save'>").focus();
     this.$(".change-title").addClass("disable1");
     this.$(".change-title").removeClass("change-title");
-    this.$('.link-item-title').tooltip();
+    this.$('input[data-toggle="tooltip"]').tooltip();
   },
   apply: function (e) {
     if (e.keyCode == 13) {
@@ -2362,5 +2362,5 @@ $(document).ready(function () {
     $(".link-count").html(temp({
         "length": app.links.length
     }));
-  $('[data-toggle="tooltip"]').tooltip();
+  $('input[data-toggle="tooltip"]').tooltip();
 });

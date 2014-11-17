@@ -27,20 +27,20 @@ module.exports = function (grunt) {
         },
         concat: {
             dist: {
-                src: ["js/lib/jquery/jquery-2.1.1.min.js", "js/lib/underscore/underscore.js", "js/lib/backboneJS/backbone.js", "js/lib/backboneJS/backbone.LocalStorage.js", "js/lib/bootstrap.min.js", "js/models/link.js", "js/collection/links.js", "js/views/linkView.js", "js/views/app.js", "js/main.js"],
-                dest: "release/js/main.js"
+                src: ["js/lib/jquery/jquery-2.1.1.min.js", "js/lib/underscore/underscore.js", "js/lib/backboneJS/backbone.js", "js/lib/backboneJS/backbone.LocalStorage.js", "js/lib/bootstrap.min.js", "js/models/link.js", "js/collection/links.js", "js/views/linkView.js", "js/views/app.js", "js/main.min.js"],
+                dest: "release/js/main.min.js"
             }
         },
         uglify: {
             build: {
-                src: "release/js/main.js",
+                src: "release/js/main.min.js",
                 dest: "release/js/main.min.js"
             }
         },
         cssmin: {
             with_banner: {
                 files: {
-                    "release/css/style.min.css": ["css/style.css"]
+                    "release/css/style.min.css": ["css/style.min.css"]
                 }
             }
         },
@@ -56,8 +56,19 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src: "release/js/main.js",
-                dest: "release/js/main.js"
+                src: "release/js/main.min.js",
+                dest: "release/js/main.min.js"
+            }
+        },
+        htmlmin: {
+            options: {
+                removeComments: true,
+                collapseWhitespace: true
+            },
+            dev: {
+                files: {
+                    'release/index.html': 'index.html'
+                }
             }
         }
     });
@@ -68,6 +79,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-remove-logging");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.registerTask("default", ["jshint", "removelogging", "concat", "removelogging", "uglify", "cssmin", "watch"]);
-    grunt.registerTask("build-app", ["jshint", "removelogging", "concat", "uglify", "cssmin"])
+    grunt.registerTask("default", ["jshint", "removelogging", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "watch"]);
+    grunt.registerTask("build-app", ["jshint", "removelogging", "concat", "uglify", "cssmin", "htmlmin"])
 };
