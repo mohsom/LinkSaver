@@ -45,8 +45,10 @@ module.exports = function (grunt) {
             }
         },
         watch:{
-            files:"js/*.js",
-            tasks:"concat uglify cssmin jshint"
+            scripts: {
+                files: ["js/*.js","js/collection/*.js","js/model/*.js","js/views/*js"],
+                tasks: "concat uglify jshint"
+            }
         }
     });
     grunt.loadNpmTasks("grunt-contrib-jshint");
