@@ -1489,7 +1489,7 @@ app.LinkView = Backbone.View.extend({
       this.$(".link-item-title").html(this.model.get("title"));
       this.$(".change-title").removeClass("disable");
     }
-  }
+    }
 });
 console.log("Link view init");
 
