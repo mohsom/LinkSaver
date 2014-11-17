@@ -19,7 +19,9 @@ module.exports=function(grunt){
                 globals:{
                     jQuery:true,
                     $:true,
-                    console:true
+                    console:true,
+                    Backbone:true,
+                    _:true
                 }
             },
             "<%=pkg.name%>":{
