@@ -99,6 +99,7 @@ body {
 .butl:hover {
     color: red;
     transform: scale(1.1);
+    transform: rotate(360deg);
     transition: all 0.25s;
 }
 
@@ -180,9 +181,10 @@ a.linkG:active {
     position: fixed;
     margin-top: 6em;
     transition: all 0.25s;
+    color: #ffffff;
 }
 .delete-all:hover
 {
-    transform: scale(1.1);
+    transform: rotate(360deg);
     transition: all 0.25s;
 }
