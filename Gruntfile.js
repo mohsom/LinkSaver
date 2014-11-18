@@ -52,6 +52,10 @@ module.exports = function (grunt) {
             css: {
                 files: "css/*.css",
                 tasks: ["cssmin"]
+            },
+            html:{
+                files: "index.html",
+                tasks: ["htmlmin"]
             }
         },
         removelogging: {
