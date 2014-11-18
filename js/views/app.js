@@ -1,3 +1,6 @@
+/**
+ * Created by mohsom on 14.11.2014.
+ */
 var app = app || {};
 app.ColView = Backbone.View.extend({
     el: "body",
