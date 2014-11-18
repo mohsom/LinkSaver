@@ -39,6 +39,7 @@ app.ColView = Backbone.View.extend({
         $(".link-count").html(temp({
             "length": app.links.length
         }));
+        $("#collection").html("");
     },
     addLink: function (e) {
         e.preventDefault();
