@@ -53,7 +53,7 @@ module.exports = function (grunt) {
                 files: "css/*.css",
                 tasks: ["cssmin"]
             },
-            html:{
+            html: {
                 files: "index.html",
                 tasks: ["htmlmin"]
             }
@@ -73,6 +73,16 @@ module.exports = function (grunt) {
                     'release/index.html': 'index.html'
                 }
             }
+        },
+        imagemin: {
+            static: {
+                optimizationLevel: 3,
+                svgoPlugins: [{removeViewBox: false}],
+                use: [mozjpeg()]
+            },
+            files: {
+                'release/css/back.jpg': 'release/css/back.jpg'
+            }
         }
     });
     grunt.loadNpmTasks("grunt-contrib-jshint");
@@ -82,7 +92,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-remove-logging");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.registerTask("default", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "watch"]);
-    grunt.registerTask("build-app", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin"]);
-    grunt.registerTask("debug", ["jshint", "concat", "uglify", "cssmin", "htmlmin","watch"]);
+    grunt.registerTask("build-app", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "imagemin"]);
+    grunt.registerTask("debug", ["jshint", "concat", "uglify", "cssmin", "htmlmin", "watch"]);
+
 };
