@@ -14,10 +14,7 @@ app.LinkView = Backbone.View.extend({
         return this;
     },
     deleteAll:function(){
-      app.links.each(function(){
-          this.deleteL();
-          console.log("deleted");
-      });
+        
     },
     deleteL: function () {
         this.model.destroy();
