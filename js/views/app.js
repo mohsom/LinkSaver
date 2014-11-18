@@ -10,6 +10,10 @@ app.ColView = Backbone.View.extend({
         app.links.fetch();
     },
     render: function () {
+        $("#collection").html("");
+        if (app.links.length == 0) {
+            $("#header1").removeClass("disable");
+        }
         app.links.each(function (item) {
             this.renderLink(item)
         }, this);
@@ -68,7 +72,8 @@ app.ColView = Backbone.View.extend({
         $("#href").val("");
     },
     deleteAll:function(){
-        app.links.reset({});
+        app.links.reset();
+        this.render();
     }
 });
 console.log("app view init");
