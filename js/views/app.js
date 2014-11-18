@@ -43,6 +43,7 @@ app.ColView = Backbone.View.extend({
             "length": app.links.length
         }));
         $("#collection").html("");
+        console.log("deleteAll");
     },
     addLink: function (e) {
         e.preventDefault();
