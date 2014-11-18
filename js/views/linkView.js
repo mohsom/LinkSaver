@@ -5,12 +5,19 @@ app.LinkView = Backbone.View.extend({
     events: {
         "click .butl": "deleteL",
         "click .change-title": "changeTitle",
-        "keypress .reset-title": "apply"
+        "keypress .reset-title": "apply",
+        "click .delete-all":"deleteAll"
     },
     render: function () {
         var temp = _.template($("#link-template").html());
         this.$el.html(temp(this.model.toJSON()));
         return this;
+    },
+    deleteAll:function(){
+      app.links.each(function(){
+          this.deleteL();
+          console.log("deleted");
+      });
     },
     deleteL: function () {
         this.model.destroy();
