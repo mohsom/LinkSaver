@@ -26,7 +26,11 @@ app.ColView = Backbone.View.extend({
         }));
     },
     events: {
-        "click .add": "addLink"
+        "click .add": "addLink",
+        "click .delete-all":"deleteAll"
+    },
+    deleteAll:function(){
+      app.links.reset();
     },
     addLink: function (e) {
         e.preventDefault();

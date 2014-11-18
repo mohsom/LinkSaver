@@ -5,8 +5,7 @@ app.LinkView = Backbone.View.extend({
     events: {
         "click .butl": "deleteL",
         "click .change-title": "changeTitle",
-        "keypress .reset-title": "apply",
-        "click .delete-all":"deleteAll"
+        "keypress .reset-title": "apply"
     },
     render: function () {
         var temp = _.template($("#link-template").html());
@@ -14,7 +13,7 @@ app.LinkView = Backbone.View.extend({
         return this;
     },
     deleteAll:function(){
-        
+      app.links.reset();
     },
     deleteL: function () {
         this.model.destroy();
