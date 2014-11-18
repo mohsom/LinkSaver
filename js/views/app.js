@@ -30,7 +30,8 @@ app.ColView = Backbone.View.extend({
         "click .delete-all":"deleteAll"
     },
     deleteAll:function(){
-      app.links.reset();
+        app.links.reset();
+        console.log("delete");
     },
     addLink: function (e) {
         e.preventDefault();
