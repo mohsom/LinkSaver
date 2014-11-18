@@ -30,11 +30,10 @@ app.ColView = Backbone.View.extend({
         "click .delete-all":"deleteAll"
     },
     deleteAll:function(){
-        //app.links.each(function(model){
-        //    //model.destroy();
-        //    //model.view.remove(); //i must delete view of each element in collection
-        //});
-        app.links.remove();
+        app.links.each(function(model){
+             app.links.remove(model);
+        });
+        app.links.reset();
         console.log("delete");
         if (app.links.length == 0) {
             $("#header1").removeClass("disable");
