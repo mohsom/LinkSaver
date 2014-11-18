@@ -83,5 +83,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-remove-logging");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.registerTask("default", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "watch"]);
-    grunt.registerTask("build-app", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin"])
+    grunt.registerTask("build-app", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin"]);
+    grunt.registerTask("debug", ["jshint", "concat", "uglify", "cssmin", "htmlmin","watch"]);
 };
