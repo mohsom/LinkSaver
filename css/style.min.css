@@ -157,3 +157,16 @@ a.linkG:active {
     display: block;
     margin: 0 auto;
 }
+.delete-all
+{
+    margin-left: 1em;
+    cursor:pointer;
+    position: fixed;
+    margin-top: 6em;
+    transition: all 0.25s;
+}
+.delete-all:hover
+{
+    transform: scale(1.1);
+    transition: all 0.25s;
+}
