@@ -179,12 +179,27 @@ a.linkG:active {
     margin-left: 1em;
     cursor:pointer;
     position: fixed;
-    margin-top: 6em;
+    margin-top: 5em;
     transition: all 0.25s;
     color: #ffffff;
 }
 .delete-all:hover
 {
     transform: rotate(360deg);
+    transition: all 0.25s;
+}
+.totop
+{
+    margin-left: 1em;
+    cursor:pointer;
+    position: fixed;
+    margin-top: 7em;
+    transition: all 0.25s;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.totop:hover{
+    opacity: 1;
+    transform:scale(1.1);
     transition: all 0.25s;
 }
