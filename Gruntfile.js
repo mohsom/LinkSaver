@@ -22,6 +22,11 @@ module.exports = function (grunt) {
                     console: true,
                     Backbone: true,
                     _: true
+                },
+                with_overrides: {
+                    files: {
+                        src: ['js/**/*.js']
+                    }
                 }
             }
         },
@@ -95,5 +100,5 @@ module.exports = function (grunt) {
     grunt.registerTask("default", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "watch"]);
     grunt.registerTask("build-app", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "imagemin"]);
     grunt.registerTask("debug", ["jshint", "concat", "uglify", "cssmin", "htmlmin", "watch"]);
-
+    grunt.registerTask("check-code", ["jshint"]);
 };
