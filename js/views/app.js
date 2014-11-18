@@ -8,6 +8,7 @@ app.ColView = Backbone.View.extend({
         this.listenTo(app.links, "add", this.renderLink);
         this.listenTo(app.links, "reset", this.render);
         app.links.fetch();
+        $('.delete-all').tooltip();
     },
     render: function () {
         $("#collection").html();
