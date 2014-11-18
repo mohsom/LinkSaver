@@ -34,11 +34,8 @@ app.ColView = Backbone.View.extend({
         "keypress #href":"addLinkByEnter"
     },
     deleteAll: function () {
-        app.links.each(function (model) {
-            app.links.remove("" + model + "");
-        });
-        window.localStorage.removeItem("links-app");
         app.links.reset();
+        window.localStorage.removeItem("links-app");
         console.log("delete");
         if (app.links.length == 0) {
             $("#header1").removeClass("disable");
