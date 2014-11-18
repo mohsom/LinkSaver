@@ -29,7 +29,7 @@ app.ColView = Backbone.View.extend({
         "click .add": "addLink",
         "click .delete-all":"deleteAll"
     },
-    deleteAll:function(){ //todo:delete all collection
+    deleteAll:function(){ 
         app.links.each(function(model){
              model.destroy();
         });
