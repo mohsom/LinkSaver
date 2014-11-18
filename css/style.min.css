@@ -62,7 +62,11 @@ body {
     transition: all 0.25s;
 }
 .link-item:hover .change-title{
-    opacity: 1;  
+    opacity: 1;
+    transition: all 0.25s;
+}
+.link-item:hover .disable1{
+    opacity: 1;
     transition: all 0.25s;
 }
 .butl {
