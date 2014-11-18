@@ -6,7 +6,7 @@ app.ColView = Backbone.View.extend({
     el: "body",
     initialize: function () {
         this.listenTo(app.links, "add", this.renderLink);
-        this.listenTo(app.links, "reset", this.render);
+        this.listenTo(app.links, "reset", this.render1);
         app.links.fetch();
     },
     render: function () {
@@ -17,6 +17,16 @@ app.ColView = Backbone.View.extend({
         app.links.each(function (item) {
             this.renderLink(item)
         }, this);
+    },
+    render1:function(){
+        var temp = _.template($("#link-counter").html());
+        $("#collection").html("");
+        if (app.links.length == 0) {
+            $("#header1").removeClass("disable");
+        }
+        $(".link-count").html(temp({
+            "length": app.links.length
+        }));
     },
     renderLink: function (item) {
         var link = new app.LinkView({
