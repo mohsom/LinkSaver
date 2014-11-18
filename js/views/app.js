@@ -30,6 +30,10 @@ app.ColView = Backbone.View.extend({
         "click .delete-all":"deleteAll"
     },
     deleteAll:function(){
+        app.links.each(function(model){
+            model.destroy();
+            model.view.remove();
+        });
         app.links.reset();
         console.log("delete");
         if (app.links.length == 0) {
