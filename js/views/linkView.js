@@ -12,9 +12,6 @@ app.LinkView = Backbone.View.extend({
         this.$el.html(temp(this.model.toJSON()));
         return this;
     },
-    deleteAll:function(){
-      app.links.reset();
-    },
     deleteL: function () {
         this.model.destroy();
         this.remove();

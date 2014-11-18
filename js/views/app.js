@@ -32,6 +32,13 @@ app.ColView = Backbone.View.extend({
     deleteAll:function(){
         app.links.reset();
         console.log("delete");
+        if (app.links.length == 0) {
+            $("#header1").removeClass("disable");
+        }
+        var temp = _.template($("#link-counter").html());
+        $(".link-count").html(temp({
+            "length": app.links.length
+        }));
     },
     addLink: function (e) {
         e.preventDefault();
