@@ -60,8 +60,8 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src: "release/js/main.min.js",
-                dest: "release/js/main.min.js"
+                src: "release/js/main1.min.js",
+                dest: "release/js/main1.min.js"
             }
         },
         htmlmin: {
