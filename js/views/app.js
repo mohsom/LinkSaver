@@ -31,7 +31,6 @@ app.ColView = Backbone.View.extend({
     },
     deleteAll:function(){//bug here
         app.links.each(function(model){
-             model.destroy();
              app.links.remove(""+model+"");
         });
         app.links.each(function(model){
