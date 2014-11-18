@@ -1,0 +1,10 @@
+{
+  "name":"LinkSaver",
+  "version":"1.0.0",
+  "dependencies":{
+    "jquery":"latest",
+    "underscore":"latest",
+    "backbone":"latest",
+    "Backbone.localStorage":"latest"
+  }
+}
