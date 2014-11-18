@@ -10,6 +10,7 @@
     "grunt-contrib-watch": "latest",
     "grunt-remove-logging": "latest",
     "grunt-contrib-htmlmin": "latest",
-    "grunt-contrib-imagemin":"latest"
+    "grunt-contrib-imagemin":"latest",
+    "bower":"latest"
   }
 }
