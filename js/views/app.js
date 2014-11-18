@@ -31,8 +31,8 @@ app.ColView = Backbone.View.extend({
     },
     deleteAll:function(){
         app.links.each(function(model){
-            model.destroy();
-            model.view.remove(); //i must delete view of each element in collection
+            //model.destroy();
+            //model.view.remove(); //i must delete view of each element in collection
         });
         app.links.reset();
         console.log("delete");
