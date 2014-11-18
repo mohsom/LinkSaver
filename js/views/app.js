@@ -6,27 +6,14 @@ app.ColView = Backbone.View.extend({
     el: "body",
     initialize: function () {
         this.listenTo(app.links, "add", this.renderLink);
-        this.listenTo(app.links, "reset", this.render1);
+        this.listenTo(app.links, "reset", this.render);
         app.links.fetch();
     },
     render: function () {
-        $("#collection").html("");
-        if (app.links.length == 0) {
-            $("#header1").removeClass("disable");
-        }
+        $("#collection").html();
         app.links.each(function (item) {
             this.renderLink(item)
         }, this);
-    },
-    render1:function(){
-        var temp = _.template($("#link-counter").html());
-        $("#collection").html("");
-        if (app.links.length == 0) {
-            $("#header1").removeClass("disable");
-        }
-        $(".link-count").html(temp({
-            "length": app.links.length
-        }));
     },
     renderLink: function (item) {
         var link = new app.LinkView({
@@ -39,8 +26,7 @@ app.ColView = Backbone.View.extend({
         }));
     },
     events: {
-        "click .add": "addLink",
-        "click .delete-all":"deleteAll"
+        "click .add": "addLink"
     },
     addLink: function (e) {
         e.preventDefault();
@@ -80,9 +66,6 @@ app.ColView = Backbone.View.extend({
         $("#header1").addClass("disable");
         $("#title").val("");
         $("#href").val("");
-    },
-    deleteAll:function(){
-        app.links.reset();
     }
 });
 console.log("app view init");
