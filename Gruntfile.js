@@ -60,8 +60,8 @@ module.exports = function (grunt) {
         },
         removelogging: {
             dist: {
-                src: "release/js/main1.min.js",
-                dest: "release/js/main1.min.js"
+                src: "js/main1.min.js",
+                dest: "js/main1.min.js"
             }
         },
         htmlmin: {
@@ -82,6 +82,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-remove-logging");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.registerTask("default", ["jshint", "removelogging", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "watch"]);
-    grunt.registerTask("build-app", ["jshint", "removelogging", "concat", "uglify", "cssmin", "htmlmin"])
+    grunt.registerTask("default", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "watch"]);
+    grunt.registerTask("build-app", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin"])
 };
