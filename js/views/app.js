@@ -29,9 +29,9 @@ app.ColView = Backbone.View.extend({
     events: {
         "click .add": "addLink",
         "click .delete-all": "deleteAll",
-        "keypress .add": "addLinkByEnter",
-        "keypress #title":"addLinkByEnter",
-        "keypress #href":"addLinkByEnter"
+        "keypress .add": "addLinkByEnter"
+        //"keypress #title":"addLinkByEnter",
+        //"keypress #href":"addLinkByEnter"
     },
     deleteAll: function () {
         app.links.each(function (model) {
@@ -90,7 +90,6 @@ app.ColView = Backbone.View.extend({
         $("#href").val("");
     },
     addLinkByEnter: function (e) {
-        e.preventDefault();
         if (e.keyCode == 13) {
             console.log("Enter click!");
             if ((!(/^\s*$/).test($("#title").val())) && (!(/^\s*$/).test($("#href").val()))) {
