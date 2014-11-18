@@ -118,7 +118,7 @@ body {
 }
 .git:hover
 {
-    color: red;
+    color:#000000;
     transform: scale(1.1);
     transition: all 0.25s;
 }
