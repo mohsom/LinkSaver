@@ -77,8 +77,7 @@ module.exports = function (grunt) {
         imagemin: {
             static: {
                 optimizationLevel: 3,
-                svgoPlugins: [{removeViewBox: false}],
-                use: [mozjpeg()]
+                svgoPlugins: [{removeViewBox: false}]
             },
             files: {
                 'release/css/back.jpg': 'release/css/back.jpg'
