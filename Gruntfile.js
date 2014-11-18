@@ -33,7 +33,7 @@ module.exports = function (grunt) {
         },
         uglify: {
             build: {
-                src: "js/main1.min.js",
+                src: "release/js/main1.min.js",
                 dest: "release/js/main1.min.js"
             }
         },
@@ -61,7 +61,7 @@ module.exports = function (grunt) {
         removelogging: {
             dist: {
                 src: "js/main1.min.js",
-                dest: "js/main1.min.js"
+                dest: "release/js/main1.min.js"
             }
         },
         htmlmin: {
