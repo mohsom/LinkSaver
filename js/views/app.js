@@ -29,9 +29,9 @@ app.ColView = Backbone.View.extend({
     events: {
         "click .add": "addLink",
         "click .delete-all": "deleteAll",
-        "keypress .add": "addLinkByEnter"
-        //"keypress #title":"addLinkByEnter",
-        //"keypress #href":"addLinkByEnter"
+        "keypress .add": "addLinkByEnter",
+        "keypress #title":"addLinkByEnter",
+        "keypress #href":"addLinkByEnter"
     },
     deleteAll: function () {
         app.links.each(function (model) {
@@ -127,6 +127,9 @@ app.ColView = Backbone.View.extend({
             $("#header1").addClass("disable");
             $("#title").val("");
             $("#href").val("");
+        }
+        else{
+            return;
         }
     }
 });
