@@ -203,3 +203,13 @@ a.linkG:active {
     transform:scale(1.1);
     transition: all 0.25s;
 }
+.no-arrow
+{
+    margin-left: 1em;
+    cursor:pointer;
+    position: fixed;
+    margin-top: 7em;
+    opacity: 0.2;
+    transition: all 0.25s;
+    color: #ffffff;
+}
