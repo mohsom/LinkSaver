@@ -206,7 +206,6 @@ a.linkG:active {
 .no-arrow
 {
     margin-left: 1em;
-    cursor:pointer;
     position: fixed;
     margin-top: 7em;
     opacity: 0.2;
