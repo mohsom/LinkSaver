@@ -89,7 +89,7 @@ app.ColView = Backbone.View.extend({
             $("#href").val("");
         }
     },
-    addLinkByEnter: function (e) {  //todo:пофіксити баг з пробєлами
+    addLinkByEnter: function (e) {  
         if (e.keyCode == 13) {
             console.log("Enter click!");
             var process=false;
