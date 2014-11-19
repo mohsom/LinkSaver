@@ -90,36 +90,32 @@ app.ColView = Backbone.View.extend({
                     title: $("#title").val(),
                     href: $("#href").val()
                 }));
+                $("#title").removeClass("empty-field");
+                $("#href").removeClass("empty-field");
                 console.log("href full,title full");
             }
             if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-                app.links.create(new app.LinkModel({
-                    title: "Noname",
-                    href: "Noname"
-                }));
+                $("#title").addClass("empty-field");
+                $("#href").addClass("empty-field");
                 console.log("href empty,title empty");
             }
             if ((!(/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-                app.links.create(new app.LinkModel({
-                    title: $("#title").val(),
-                    href: "Noname"
-                }));
+                $("#href").addClass("empty-field");
+                $("#title").removeClass("empty-field");
                 console.log("href empty,title full");
             }
             if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
-                app.links.create(new app.LinkModel({
-                    title: "Noname",
-                    href: $("#href").val()
-                }));
+                $("#title").addClass("empty-field");
+                ("#href").removeClass("empty-field");
                 console.log("href full,title empty");
             }
             var temp = _.template($("#link-counter").html());
             $(".link-count").html(temp({
                 "length": app.links.length
             }));
-            $("#header1").addClass("disable");
-            $("#title").val("");
-            $("#href").val("");
+            if(app.links.length>0){
+                $("#header1").addClass("disable");
+            }
         }
         else{
             return;
