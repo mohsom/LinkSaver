@@ -221,7 +221,7 @@ a.linkG:active {
     color:#0086b3;
 }
 .item-link:hover{
-    text-decoration: none;
+    text-decoration: underline;
     color:#0086b3;
 }
 .item-link:target{
