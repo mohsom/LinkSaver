@@ -62,17 +62,17 @@ app.ColView = Backbone.View.extend({
             console.log("href full,title full");
         }
         if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-            $("#title").addClass("empty-field");
-            $("#href").addClass("empty-field");
+            $("#title").addClass("empty-field").val("");
+            $("#href").addClass("empty-field").val("");
             console.log("href empty,title empty");
         }
         if ((!(/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-            $("#href").addClass("empty-field");
+            $("#href").addClass("empty-field").val("");
             $("#title").removeClass("empty-field");
             console.log("href empty,title full");
         }
         if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
-            $("#title").addClass("empty-field");
+            $("#title").addClass("empty-field").val("");
             $("#href").removeClass("empty-field");
             console.log("href full,title empty");
         }
@@ -93,7 +93,6 @@ app.ColView = Backbone.View.extend({
         if (e.keyCode == 13) {
             console.log("Enter click!");
             var process=false;
-            console.log("click!");
             if ((!(/^\s*$/).test($("#title").val())) && (!(/^\s*$/).test($("#href").val()))) {
                 app.links.create(new app.LinkModel({
                     title: $("#title").val(),
@@ -105,17 +104,17 @@ app.ColView = Backbone.View.extend({
                 console.log("href full,title full");
             }
             if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-                $("#title").addClass("empty-field");
-                $("#href").addClass("empty-field");
+                $("#title").addClass("empty-field").val("");
+                $("#href").addClass("empty-field").val("");
                 console.log("href empty,title empty");
             }
             if ((!(/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-                $("#href").addClass("empty-field");
+                $("#href").addClass("empty-field").val("");
                 $("#title").removeClass("empty-field");
                 console.log("href empty,title full");
             }
             if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
-                $("#title").addClass("empty-field");
+                $("#title").addClass("empty-field").val("");
                 $("#href").removeClass("empty-field");
                 console.log("href full,title empty");
             }
