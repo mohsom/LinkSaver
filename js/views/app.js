@@ -55,10 +55,8 @@ app.ColView = Backbone.View.extend({
                 title: $("#title").val(),
                 href: $("#href").val()
             }));
-            $("#title").val("");
-            $("#href").val("");
-            $("#title").removeClass("empty-field");
-            $("#href").removeClass("empty-field");
+            $("#title").val("").removeClass("empty-field");
+            $("#href").val("").removeClass("empty-field");
             console.log("href full,title full");
         }
         if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
