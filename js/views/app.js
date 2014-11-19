@@ -50,8 +50,6 @@ app.ColView = Backbone.View.extend({
     addLink: function (e) {
         e.preventDefault();
         console.log("click!");
-        $("#title").removeClass("empty-field");
-        $("#href").removeClass("empty-field");
         if ((!(/^\s*$/).test($("#title").val())) && (!(/^\s*$/).test($("#href").val()))) {
             app.links.create(new app.LinkModel({
                 title: $("#title").val(),
@@ -85,6 +83,8 @@ app.ColView = Backbone.View.extend({
         if(app.links.length>0){
             $("#header1").addClass("disable");
         }
+        $("#title").removeClass("empty-field");
+        $("#href").removeClass("empty-field");
     },
     addLinkByEnter: function (e) {
         if (e.keyCode == 13) {
