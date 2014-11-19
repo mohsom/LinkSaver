@@ -5,6 +5,8 @@
     "jquery":"latest",
     "underscore":"latest",
     "backbone":"latest",
-    "Backbone.localStorage":"latest"
+    "Backbone.localStorage":"latest",
+    "bootstrap":"latest",
+    "fontawesome":"latest"
   }
 }
