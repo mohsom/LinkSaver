@@ -59,6 +59,8 @@ app.ColView = Backbone.View.extend({
             }));
             $("#title").val("");
             $("#href").val("");
+            $("#title").removeClass("empty-field");
+            $("#href").removeClass("empty-field");
             console.log("href full,title full");
         }
         if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
@@ -68,10 +70,12 @@ app.ColView = Backbone.View.extend({
         }
         if ((!(/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
             $("#href").addClass("empty-field");
+            $("#title").removeClass("empty-field");
             console.log("href empty,title full");
         }
         if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
-            $("#title").addClass("empty-field")
+            $("#title").addClass("empty-field");
+            ("#href").removeClass("empty-field");
             console.log("href full,title empty");
         }
         var temp = _.template($("#link-counter").html());
