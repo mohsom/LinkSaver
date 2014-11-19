@@ -73,7 +73,7 @@ app.ColView = Backbone.View.extend({
         }
         if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
             $("#title").addClass("empty-field");
-            ("#href").removeClass("empty-field");
+            $("#href").removeClass("empty-field");
             console.log("href full,title empty");
         }
         var temp = _.template($("#link-counter").html());
@@ -92,6 +92,8 @@ app.ColView = Backbone.View.extend({
     addLinkByEnter: function (e) {
         if (e.keyCode == 13) {
             console.log("Enter click!");
+            var process=false;
+            console.log("click!");
             if ((!(/^\s*$/).test($("#title").val())) && (!(/^\s*$/).test($("#href").val()))) {
                 app.links.create(new app.LinkModel({
                     title: $("#title").val(),
@@ -99,6 +101,7 @@ app.ColView = Backbone.View.extend({
                 }));
                 $("#title").removeClass("empty-field");
                 $("#href").removeClass("empty-field");
+                process=true;
                 console.log("href full,title full");
             }
             if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
@@ -113,7 +116,7 @@ app.ColView = Backbone.View.extend({
             }
             if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
                 $("#title").addClass("empty-field");
-                ("#href").removeClass("empty-field");
+                $("#href").removeClass("empty-field");
                 console.log("href full,title empty");
             }
             var temp = _.template($("#link-counter").html());
@@ -122,6 +125,11 @@ app.ColView = Backbone.View.extend({
             }));
             if(app.links.length>0){
                 $("#header1").addClass("disable");
+            }
+            if(process)
+            {
+                $("#title").val("");
+                $("#href").val("");
             }
         }
         else{
