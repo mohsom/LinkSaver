@@ -81,8 +81,6 @@ app.ColView = Backbone.View.extend({
         if(app.links.length>0){
             $("#header1").addClass("disable");
         }
-        $("#title").removeClass("empty-field");
-        $("#href").removeClass("empty-field");
     },
     addLinkByEnter: function (e) {
         if (e.keyCode == 13) {
