@@ -51,7 +51,7 @@ module.exports = function (grunt) {
         },
         watch: {
             scripts: {
-                files: ["js/*.js", "js/collection/*.js", "js/model/*.js", "js/views/*js"],
+                files: ["js/*.js", "js/collection/*.js", "js/model/*.js", "js/views/*js","index.html","css/style.min.css"],
                 tasks: ["jshint", "removelogging", "concat", "removelogging", "uglify", "cssmin", "htmlmin"]
             },
             css: {
@@ -97,8 +97,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-remove-logging");
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.registerTask("default", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "watch"]);
     grunt.registerTask("build-app", ["jshint", "concat", "removelogging", "uglify", "cssmin", "htmlmin", "imagemin"]);
-    grunt.registerTask("debug", ["jshint", "concat", "uglify", "cssmin", "htmlmin", "watch"]);
+    grunt.registerTask("debug", ["watch"]);
     grunt.registerTask("check-code", ["jshint"]);
 };
