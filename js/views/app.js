@@ -49,6 +49,7 @@ app.ColView = Backbone.View.extend({
     },
     addLink: function (e) {
         e.preventDefault();
+        var process=false;
         console.log("click!");
         if ((!(/^\s*$/).test($("#title").val())) && (!(/^\s*$/).test($("#href").val()))) {
             app.links.create(new app.LinkModel({
@@ -57,6 +58,7 @@ app.ColView = Backbone.View.extend({
             }));
             $("#title").removeClass("empty-field");
             $("#href").removeClass("empty-field");
+            process=true;
             console.log("href full,title full");
         }
         if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
@@ -80,6 +82,11 @@ app.ColView = Backbone.View.extend({
         }));
         if(app.links.length>0){
             $("#header1").addClass("disable");
+        }
+        if(process)
+        {
+            $("#title").val("");
+            $("#href").val("");
         }
     },
     addLinkByEnter: function (e) {
