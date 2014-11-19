@@ -7,7 +7,7 @@ html
                     include css/style.min.css
                     include js/lib/fontawesome/css/font-awesome.min.css
             script(src="js/main1.min.js")
-      body(background="css/back.jpg" background-attachment="fixed")
+      body
             div(class="content")
                     a(href="https://github.com/mohsom/LinkSaver" class="linkG")
                             i(class="fa fa-4x fa-github git")
@@ -26,8 +26,8 @@ html
                                     input(type="text" class="form-control" id="title" placeholder="Enter link address" tabindex="2")
                                     div(class="btn btn-default add" tabindex="3").
                                                                             Add
-                                i(class="fa fa-refresh delete-all fa-4x" data-toggle="tooltip" data-placement="right" title="Click to delete all links")
-                                i(class="fa fa-chevron-circle-up fa-4x totop")
+                    i(class="fa fa-refresh delete-all fa-4x" data-toggle="tooltip" data-placement="right" title="Click to delete all links")
+                    i(class="fa fa-chevron-circle-up fa-4x totop")
                     div#collection
                     script(type="text/template" id="link-template")
                                                 <div class="block-link">
@@ -38,3 +38,11 @@ html
                                                 </div>
                                                 <i class="fa fa-times butl"></i>
                                                 <i class="fa fa-pencil change-title"></i>
+                    script(type="text/template" id="link-counter")
+                                                    <div class="link-count">
+                                                    <%if(length!=0){%>
+                                                    <%=length%> <%if(length!=1)%>links<%else%>link
+                                                    <%}else%>No links
+                                                    </div>
+                    div(id="header1" class="").
+                                Add some links:)
