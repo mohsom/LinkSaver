@@ -5,7 +5,7 @@ html
             style
                     include js/lib/bootstrap/dist/css/bootstrap.css
                     include css/style.min.css
-
+                    include js/lib/fontawesome/css/font-awesome.min.css
             script(src="js/main1.min.js")
       body
             div(class="content")
@@ -17,6 +17,12 @@ html
                     form(class="form-inline" role="form" id="input-l")
                             div(class="form-group")
                                 div(class="input-group")
-
+                                        div.input-group-addon.
+                                            Title
+                                        input(type="text" class="form-control" id="title" placeholder="Enter title of the link" tabindex="1")
+                                div(class="input-group")
+                                    div.input-group-addon.
+                                        HREF
+                                    input(type="text" class="form-control" id="title" placeholder="Enter link address" tabindex="2")
 
 
