@@ -29,16 +29,18 @@ html
                     i(class="fa fa-refresh delete-all fa-4x" data-toggle="tooltip" data-placement="right" title="Click to delete all links")
                     i(class="fa fa-chevron-circle-up fa-4x totop")
                     div#collection
-                    script(type="text/template" id="link-template")
+                    script(type="text/template" id="link-template").
                                                  <div class="block-link">
                                                  <div class="link-item-title">
                                                  <%=title%>
                                                  </div>
-                                                 <a href="http://<%=href%>" target="_blank" tabindex="-5"><%=href%></a>
-                                                 </div>
+                                                 <a href="http://<%=href%>" target="_blank" tabindex="-5">
+                                                            <%=href%>
+                                                 </a>
+                                                 </div> 
                                                  <i class="fa fa-times butl"></i>
                                                  <i class="fa fa-pencil change-title"></i>
-                    script(type="text/template" id="link-counter")
+                    script(type="text/template" id="link-counter").
                                                     <div class="link-count">
                                                     <%if(length!=0){%>
                                                     <%=length%> <%if(length!=1)%>links<%else%>link
