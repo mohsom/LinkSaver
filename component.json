@@ -7,7 +7,6 @@
     "backbone":"latest",
     "Backbone.localStorage":"latest",
     "bootstrap":"latest",
-    "fontawesome":"latest",
-    "require":"latest"
+    "fontawesome":"latest"
   }
 }
