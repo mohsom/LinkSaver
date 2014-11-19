@@ -2,6 +2,11 @@ doctype html
 html
       head
             title LinkSaver
+            style
+                    include js/lib/bootstrap/dist/css/bootstrap.css
+                    include css/style.min.css
+
+            script(src="js/main1.min.js")
       body
             div(class="content")
                     a(href="https://github.com/mohsom/LinkSaver" class="linkG")
@@ -10,5 +15,8 @@ html
                                 LinkSaver
                     div.link-count
                     form(class="form-inline" role="form" id="input-l")
+                            div(class="form-group")
+                                div(class="input-group")
+
 
 
