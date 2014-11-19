@@ -50,6 +50,8 @@ app.ColView = Backbone.View.extend({
     addLink: function (e) {
         e.preventDefault();
         console.log("click!");
+        $("#title").removeClass("empty-field");
+        $("#href").removeClass("empty-field");
         if ((!(/^\s*$/).test($("#title").val())) && (!(/^\s*$/).test($("#href").val()))) {
             app.links.create(new app.LinkModel({
                 title: $("#title").val(),
@@ -58,10 +60,8 @@ app.ColView = Backbone.View.extend({
             console.log("href full,title full");
         }
         if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-            app.links.create(new app.LinkModel({
-                title: "Noname",
-                href: "Noname"
-            }));
+            $("#title").addClass("empty-field");
+            $("#href").addClass("empty-field");
             console.log("href empty,title empty");
         }
         if ((!(/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
