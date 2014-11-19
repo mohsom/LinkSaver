@@ -61,17 +61,17 @@ app.ColView = Backbone.View.extend({
             console.log("href full,title full");
         }
         if (((/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-            $("#title").addClass("empty-field").val("");
+            $("#title").addClass("empty-field").val("").focus();
             $("#href").addClass("empty-field").val("");
             console.log("href empty,title empty");
         }
         if ((!(/^\s*$/).test($("#title").val())) && ((/^\s*$/).test($("#href").val()))) {
-            $("#href").addClass("empty-field").val("");
+            $("#href").addClass("empty-field").val("").focus();
             $("#title").removeClass("empty-field");
             console.log("href empty,title full");
         }
         if ((!(/^\s*$/).test($("#href").val())) && (((/^\s*$/).test($("#title").val())))) {
-            $("#title").addClass("empty-field").val("");
+            $("#title").addClass("empty-field").val("").focus();
             $("#href").removeClass("empty-field");
             console.log("href full,title empty");
         }
