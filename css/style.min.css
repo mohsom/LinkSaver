@@ -141,8 +141,7 @@ body {
 }
 .git:hover
 {
-    color:#000000;
-    transform: scale(1.1);
+    transform: rotateY(180deg);
     transition: all 0.25s;
 }
 a.linkG:visited {
