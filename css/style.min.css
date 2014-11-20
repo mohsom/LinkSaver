@@ -132,6 +132,7 @@ body {
     margin-left: 1em;
     transition: all 0.25s;
     position: absolute;
+    color:#ffffff;
 }
 .git:hover
 {
