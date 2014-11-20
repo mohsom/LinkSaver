@@ -5,7 +5,8 @@ app.LinkView = Backbone.View.extend({
     events: {
         "click .butl": "deleteL",
         "click .change-title": "changeTitle",
-        "keypress .reset-title": "apply"
+        "keypress .reset-title": "applyByEnter",
+        "click .disable1": "applyByPencil"
     },
     render: function () {
         var temp = _.template($("#link-template").html());
@@ -30,7 +31,7 @@ app.LinkView = Backbone.View.extend({
         this.$(".change-title").removeClass("change-title");
         this.$('input[data-toggle="tooltip"]').tooltip();
     },
-    apply: function (e) {
+    applyByEnter: function (e) {
         if (e.keyCode == 13) {
             if (((/^\s*$/).test($(".reset-title").val()))) {
                 this.model.save({
@@ -47,6 +48,22 @@ app.LinkView = Backbone.View.extend({
             this.$(".link-item-title").html(this.model.get("title"));
             this.$(".fa-pencil").removeClass("disable1").addClass("change-title");
         }
+    },
+    applyByPencil:function(){
+        if (((/^\s*$/).test($(".reset-title").val()))) {
+            this.model.save({
+                title: this.model.get("title"),
+                href: this.model.get("href")
+            });
+        }
+        else {
+            this.model.save({
+                title: $(".reset-title").val().trim(),
+                href: this.model.get("href")
+            });
+        }
+        this.$(".link-item-title").html(this.model.get("title"));
+        this.$(".fa-pencil").removeClass("disable1").addClass("change-title");
     }
 });
 console.log("Link view init");
