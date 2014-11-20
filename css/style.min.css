@@ -59,6 +59,11 @@ body {
     -moz-box-shadow:    6px 8px 5px 0px rgba(50, 50, 50, 0.58);
     box-shadow:         6px 8px 5px 0px rgba(50, 50, 50, 0.58);
     text-align: left;
+    transition: all 0.25s;
+}
+.link-item:hover{
+    transform:translate(20px,10px);
+    transition: all 0.25s;
 }
 .link-item:hover .butl{
     opacity: 1;
