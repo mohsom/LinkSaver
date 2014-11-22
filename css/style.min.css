@@ -217,10 +217,6 @@ a.linkG:active {
     transition: all 0.25s;
     color: #ffffff;
 }
-.empty-field
-{
-    border-color: red;
-}
 a.item-link{
     text-decoration: none;
     color:#0086b3;
