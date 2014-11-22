@@ -221,19 +221,17 @@ a.linkG:active {
 {
     border-color: red;
 }
-.item-link{
+a.item-link{
     text-decoration: none;
     color:#0086b3;
 }
-.item-link:hover{
-    text-decoration: underline;
-    color:#0086b3;
-}
-.item-link:target{
+a.item-link:hover{
+     text-decoration: none;
+ }
+a.item-link:target{
     text-decoration: none;
-    color:#0086b3;
 }
-.item-link:visited{
+a.item-link:visited{
     text-decoration: none;
-    color:#0086b3;
 }
+
