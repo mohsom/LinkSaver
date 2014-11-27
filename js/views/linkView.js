@@ -57,4 +57,3 @@ app.LinkView = Backbone.View.extend({
     }
 });
 console.log("Link view init");
-
